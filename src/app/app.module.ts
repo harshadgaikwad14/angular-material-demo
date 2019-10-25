@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material'; // This module added for Button
+import { MaterialModule } from 'src/app/material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { MatButtonModule } from '@angular/material'; // This module added for Bu
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
