@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule , MatButtonToggleModule , MatIconModule } from '@angular/material'; // This module added for Button
+import { MatButtonModule , MatButtonToggleModule , MatIconModule ,MatBadgeModule } from '@angular/material'; // This module added for Button
 
 
 const MatButtonModules = [
   MatButtonModule,
   MatButtonToggleModule,
-  MatIconModule
+  MatIconModule,
+  MatBadgeModule
 ];
 
 @NgModule({

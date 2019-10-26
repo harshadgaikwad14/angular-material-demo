@@ -18,7 +18,7 @@ Run Server
     ng serve
 
 
-Icon Url : https://material.io/resources/icons/?style=baseline
-Page : https://material.angular.io/components/icon/api
-YouTube : https://youtu.be/wI6kQAORiVg?list=PLC3y8-rFHvwilEuCqFGTL5Gt5U6deIrsU&t=92
+
+Page : https://material.angular.io/components/badge/examples
+YouTube : https://youtu.be/SiIPlZAOnQ4?list=PLC3y8-rFHvwilEuCqFGTL5Gt5U6deIrsU&t=467
 
