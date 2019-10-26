@@ -328,17 +328,43 @@
 <div class="content" role="main">
 
   <!-- Resources -->
-  <h2>Progress Spinner Example</h2>
-  
-  <div><mat-progress-spinner value = "80"></mat-progress-spinner></div>
-  
+  <h2>Nav Bar Example</h2>
 
-  <div>
-    <mat-spinner *ngIf="showSpinner" color ="warn">Condition Spinner</mat-spinner>
-    <button (click) = "loadData()"> Load Data</button>
-  </div>
   
-  
-  
+    <mat-toolbar color="primary" class="navbar">
+      <div>My Application</div>
+      <div>
+
+          <span>Home</span>
+          <span>Setting</span>
+          <span>Logout</span>
+      </div>
+      
+    </mat-toolbar>
+    <hr/>
+    <mat-toolbar>  
+        <mat-toolbar-row>
+          <span>First Row</span>
+        </mat-toolbar-row>
+      
+        <mat-toolbar-row>
+          <span>Second Row</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+ 
+      <hr/>
+      <mat-toolbar color="primary">
+          <span>Application Title</span>
+        
+          <!-- This fills the remaining space of the current row -->
+          <span class="example-fill-remaining-space"></span>
+        
+          <span>Home</span>
+          <span>Setting</span>
+          <span>Logout</span>
+        </mat-toolbar>
+
+
+
 
 </div>
