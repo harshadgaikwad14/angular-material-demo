@@ -325,46 +325,21 @@
   </a>
 </div>
 
-<div class="content" role="main">
+<div>
 
   <!-- Resources -->
-  <h2>Nav Bar Example</h2>
+  <h2>Side Nav Bar Example</h2>
 
-  
-    <mat-toolbar color="primary" class="navbar">
-      <div>My Application</div>
-      <div>
+  <mat-sidenav-container>
 
-          <span>Home</span>
-          <span>Setting</span>
-          <span>Logout</span>
-      </div>
-      
-    </mat-toolbar>
-    <hr/>
-    <mat-toolbar>  
-        <mat-toolbar-row>
-          <span>First Row</span>
-        </mat-toolbar-row>
-      
-        <mat-toolbar-row>
-          <span>Second Row</span>
-        </mat-toolbar-row>
-      </mat-toolbar>
- 
-      <hr/>
-      <mat-toolbar color="primary">
-          <span>Application Title</span>
-        
-          <!-- This fills the remaining space of the current row -->
-          <span class="example-fill-remaining-space"></span>
-        
-          <span>Home</span>
-          <span>Setting</span>
-          <span>Logout</span>
-        </mat-toolbar>
+    <mat-sidenav #sidenav mode="side" (opened)="log('OPENED');" (closed)="log('CLOSED');" >Mat Side Nav</mat-sidenav>
+    <mat-sidenav-content>Menu
 
-
-
+    <button (click)="sidenav.open()">Open</button> 
+    <button (click)="sidenav.close()">Close</button>   
+    <button (click)="sidenav.toggle()">Open/Close Toggle</button>      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+   
 
 </div>
