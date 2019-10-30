@@ -19,6 +19,6 @@ Run Server
 
 
 
-Page : https://material.angular.io/components/list/overview
-YouTube : https://youtu.be/u9cAb_4o8OM?list=PLC3y8-rFHvwilEuCqFGTL5Gt5U6deIrsU&t=282
+Page : https://material.angular.io/components/grid-list/overview
+YouTube : https://youtu.be/zzKfWrLkE0w?list=PLC3y8-rFHvwilEuCqFGTL5Gt5U6deIrsU&t=105
 
