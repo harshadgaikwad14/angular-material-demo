@@ -7,12 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-material-demo';
-  showSpinner = false;
-
-  loadData() {
-    this.showSpinner = true;
-    setTimeout(() => {
-      this.showSpinner = false;
-    }, 5000);
-  }
+  typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
 }
