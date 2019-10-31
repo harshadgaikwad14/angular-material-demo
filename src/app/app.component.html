@@ -329,92 +329,80 @@
 <div>
 
   <!-- Resources -->
-  <h2>Input Example</h2>
+  <h2>Select Example</h2>
 
   <h3>Example 1</h3>
-  <div>
-    <form class="example-form">
+  <mat-form-field>
+    <mat-label>Cars</mat-label>
+    <mat-select [(value)]="selectedValue">
+      <mat-option>None</mat-option>
 
-      <mat-form-field>
-        <mat-label>Name1</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <mat-option value="volvo">Volvo</mat-option>
+      <mat-option value="saab">Saab</mat-option>
+      <mat-option value="mercedes">Mercedes</mat-option>
+      <mat-option value="audi">Audi</mat-option>
+    </mat-select>
+  </mat-form-field>
 
-      <mat-form-field floatLabel="never">
-        <mat-label>Name2</mat-label>
-        <input matInput>
-      </mat-form-field>
-
-      <mat-form-field floatLabel="always">
-
-        <mat-label>Name3</mat-label>
-        <input matInput>
-      </mat-form-field>
-
-      <mat-form-field floatLabel="auto">
-
-        <mat-label>Name4</mat-label>
-        <input matInput>
-      </mat-form-field>
-
-      <mat-form-field>
-
-        <mat-label>Name5</mat-label>
-        <input matInput required>
-      </mat-form-field>
-
-      <mat-form-field hideRequiredMarker>
-
-        <mat-label>Name6</mat-label>
-        <input matInput required>
-      </mat-form-field>
-
-      <mat-form-field>
-
-        <mat-label>Name7</mat-label>
-        <input matInput>
-        <mat-hint>Max 6 Letter</mat-hint>
-      </mat-form-field>
-
-      <mat-form-field>
-
-        <mat-label>Name8</mat-label>
-        <input matInput>
-        <mat-hint align="end">Max 8 Letter</mat-hint>
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-
-        <mat-label>Name9</mat-label>
-        <input matInput>
-        <mat-hint align="end">Max 8 Letter</mat-hint>
-      </mat-form-field>
-
-      <mat-form-field appearance="outline">
-
-        <mat-label>Name10</mat-label>
-        <input matInput>
-        <mat-hint align="end">Max 8 Letter</mat-hint>
-      </mat-form-field>
-
-      <mat-form-field appearance="outline" color="warn">
-
-        <mat-label>Name11</mat-label>
-        <input matInput>
-        <mat-hint align="end">Max 8 Letter</mat-hint>
-      </mat-form-field>
+  {{selectedValue}}
 
 
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Favorite food" value="Sushi">
-      </mat-form-field>
+  <h3>Select Group Example 2</h3>
+  <mat-form-field>
+    <mat-label>Vehical</mat-label>
+    <mat-select>
+      <mat-option>None</mat-option>
+      <mat-optgroup label="car">
+        <mat-option value="volvo">Volvo</mat-option>
+        <mat-option value="saab">Saab</mat-option>
 
-      <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="Leave a comment"></textarea>
-      </mat-form-field>
-    </form>
+      </mat-optgroup>
+      <mat-optgroup label="bike">
+        <mat-option value="honda">Honda</mat-option>
+        <mat-option value="tvs">tvs</mat-option>
 
-  </div>
+      </mat-optgroup>
+
+
+    </mat-select>
+  </mat-form-field>
+
+
+<h3>Select Group Multiple Example 3</h3>
+<mat-form-field>
+  <mat-label>Vehical</mat-label>
+  <mat-select multiple>
+    <mat-option>None</mat-option>
+    <mat-optgroup label="car">
+      <mat-option value="volvo">Volvo</mat-option>
+      <mat-option value="saab">Saab</mat-option>
+
+    </mat-optgroup>
+    <mat-optgroup label="bike">
+      <mat-option value="honda">Honda</mat-option>
+      <mat-option value="tvs">tvs</mat-option>
+
+    </mat-optgroup>
+
+
+  </mat-select>
+</mat-form-field>
+
+
+<h3>Dynamic mat-select</h3>
+<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+<mat-select [(value)]="selectedFood">
+
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+{{selectedFood}}
+
+
+
 
 
 </div>
