@@ -329,75 +329,23 @@
 <div>
 
   <!-- Resources -->
-  <h2>Grid List Example</h2>
+  <h2>Cards Example</h2>
 
   <h3>Example 1</h3>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Title
-      </mat-panel-title>
-      <mat-panel-description>
-        Description
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <p>Description1</p>
-    <p>Description2</p>
-    <p>Description3</p>
-  </mat-expansion-panel>
+<mat-card>Simple card</mat-card>
 
 <h3>Example 2</h3>
-<mat-accordion>
-
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Title1
-    </mat-panel-title>
-    <mat-panel-description>
-      Description1
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <p>Description</p>
-  <p>Description</p>
-  <p>Description</p>
-</mat-expansion-panel>
+<mat-card>
+  <mat-card-title>Title</mat-card-title>
+  <mat-card-content>
+    Content
+  </mat-card-content>
+<mat-card-actions align="end">
+  <button mat-flat-button>Login</button>
+</mat-card-actions>
+</mat-card>
 
 
-
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Title2
-    </mat-panel-title>
-    <mat-panel-description>
-      Description2
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <p>Description</p>
-  <p>Description</p>
-  <p>Description</p>
-</mat-expansion-panel>
-
-
-</mat-accordion>
-
-
-<h3>Example 3</h3>
-
-
-<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Self aware panel
-    </mat-panel-title>
-    <mat-panel-description>
-      Currently I am {{panelOpenState ? 'open' : 'closed'}}
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <p>I'm visible because I am open</p>
-</mat-expansion-panel>
-
+  
 
 </div>
