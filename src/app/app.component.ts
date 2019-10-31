@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-material-demo';
-  logChange(selectedTabIndex) {
-    console.log(selectedTabIndex);
-  }
+  title = 'angular-material-demo'; 
 }
