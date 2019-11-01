@@ -1,39 +1,16 @@
 <div>
+  <mat-checkbox>Check me!</mat-checkbox>
+</div>
+<div>
 
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input type="text" placeholder="Pick one" aria-label="Number" matInput [matAutocomplete]="auto">
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let option of options" [value]="option">
-          {{option}}
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
+  <mat-checkbox labelPosition="before">Check me!</mat-checkbox>
+</div>
 
-    <mat-form-field class="example-full-width">
-      <input type="text" placeholder="Pick one Language" aria-label="Number" matInput [matAutocomplete]="auto2">
-      <mat-autocomplete #auto2="matAutocomplete" [displayWith] ="displayFn">
-        <mat-option *ngFor="let objectOption of objectOptions" [value]="objectOption">
-          {{objectOption.name}}
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
+<div>
 
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-        {{option}}
-      </mat-option>
-    </mat-autocomplete>
-  </mat-form-field>
-</form>
-
-
-
-
-  </form>
-
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="1">Option 1</mat-radio-button>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group>
 
 </div>
