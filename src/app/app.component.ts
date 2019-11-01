@@ -1,22 +1,43 @@
-import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 
-export interface Food {
-  value: string;
-  viewValue: string;
-}
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'angular-material-demo';
-  selectedValue: string;
-  selectedFood = 'tacos-2';
-  foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' }
+  options: string[] = ['One', 'Two', 'Three'];
+  objectOptions = [
+    { name: 'Java' },
+    { name: 'Java Script' },
+    { name: 'C' },
+    { name: 'C++' }
   ];
+
+  myControl = new FormControl();
+  filteredOptions: Observable<string[]>;
+
+  ngOnInit() {
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+      startWith(''),
+      map(value => this._filter(value))
+      );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+
+
+  displayFn(language) {
+    return language ? language.name : undefined;
+  }
 }
