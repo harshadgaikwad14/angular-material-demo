@@ -328,18 +328,31 @@
 <div>
 
   <!-- Resources -->
-  <h2>Side Nav Bar Example</h2>
+  <h2>Menu Example</h2>
 
-  <mat-sidenav-container>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
 
-    <mat-sidenav #sidenav mode="side" (opened)="log('OPENED');" (closed)="log('CLOSED');" >Mat Side Nav</mat-sidenav>
-    <mat-sidenav-content>Menu
+<mat-menu #rootMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">Power</button>
+    <button mat-menu-item>System settings</button>
+  </mat-menu>
+  
+  <mat-menu #subMenu="matMenu">
+    <button mat-menu-item>Shut down</button>
+    <button mat-menu-item>Restart</button>
+    <button mat-menu-item>Hibernate</button>
+  </mat-menu>
+  
+  <button mat-icon-button [matMenuTriggerFor]="rootMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
 
-    <button (click)="sidenav.open()">Open</button> 
-    <button (click)="sidenav.close()">Close</button>   
-    <button (click)="sidenav.toggle()">Open/Close Toggle</button>      
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-   
+  <button mat-icon-button [matMenuTriggerFor]="rootMenu">
+      Root Menu
+    </button>
 
 </div>
